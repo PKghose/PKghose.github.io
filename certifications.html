@@ -1,58 +1,130 @@
-<html>
+
+        <!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #0d0f1f;
+        }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
+        /* Header */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #333;
+            color: #fff;
+        }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-</style>
+        header h1 {
+            font-size: 3em;
+        }
+
+        /* Gallery Container */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Gallery Item */
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 250px;
+            height: 250px; /* Fixed height to ensure consistent spacing */
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Description Styling */
+        .description {
+            padding: 15px;
+            font-size: 1rem;
+            color: #333;
+            background-color: #f1f1f1;
+            font-weight: bold;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <h1>My Photo Gallery</h1>
+        <p>Explore some of my favorite moments captured in photos</p>
+    </header>
 
-<div class="gallery">
-  <a target="_blank" href="scholarship.png">
-    <img src="assets/img/Snapshots/scholarship.png" alt="Cinque Terre" width="600" height="400">
-  </a>
-  <div class="desc">I have been awarded the BAEN Graduate Student Scholarship for Spring 2025 at Texas A&M University.
-    The scholarship, valued at $1,000, recognizes my academic achievements and encourages me to continue striving for excellence in my graduate studies.</div>
-</div>
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="assets/img/Snapshots/scholarship.png" alt="Gallery Image 1">
+            <div class="description">I have been awarded the BAEN Graduate Student Scholarship for Spring 2025 at Texas A&M University.
+    The scholarship, valued at $1,000, recognizes my academic achievements and encourages me to continue striving for excellence in my graduate studies..</div>
+        </div>
+         <div class="gallery-item">
+            <img src="assets/img/Snapshots/BSM_conference.jpg" alt="Gallery Image 2">
+            <div class="description">Participated in 36th BSM Annual Conference 2023.</div>
+        </div>
+            <div class="gallery-item">
+            <img src="assets/img/Snapshots/gc.jpg" alt="Gallery Image 3">
+            <div class="description">Participated in BCSIR Congress 2022.</div>
+        </div>
+       
+        <div class="gallery-item">
+            <img src="assets/img/Snapshots/cc.jpg" alt="Gallery Image 4">
+            <div class="description">This is the description of Image 4.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="assets/img/Snapshots/cc.jpg" alt="Gallery Image 5">
+            <div class="description">This is the description of Image 5.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="image6.jpg" alt="Gallery Image 6">
+            <div class="description">This is the description of Image 6.</div>
+        </div>
+    </div>
 
-<div class="gallery">
-  <a target="_blank" href="img_forest.jpg">
-    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_mountains.jpg">
-    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Photo Gallery. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
+
